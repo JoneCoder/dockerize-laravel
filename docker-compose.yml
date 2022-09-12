@@ -32,8 +32,8 @@ services:
     environment:
       MYSQL_DATABASE: app
       MYSQL_USER: jonecoder
-      MYSQL_PASSWORD: 52g40h7r
-      MYSQL_ROOT_PASSWORD: 52g40h7r
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
       SERVICE_TAG: dev
       SERVICE_NAME: mysql
     networks:
