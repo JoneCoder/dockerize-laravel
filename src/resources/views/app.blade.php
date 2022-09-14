@@ -17,9 +17,11 @@
     </script>
     <title>{{ config('app.name') }}</title>
 
-    @vite()
+        <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}" />
     </head>
     <body>
        <div id="app" ></div>
+
+       <script type="module" src="{{ asset('build/assets/app.js') }}"></script>
     </body>
 </html>

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <PageLoader v-if="$root.loading" />
+        <PageLoader v-if="$root.global.loading" />
         <TopHeader />
         <router-view />
         <FooterBottom />
@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import PageLoader from "./Components/PageLoader";
-import TopHeader from "./Layouts/TopHeader";
-import FooterBottom from "./Layouts/FooterBottom";
+import PageLoader from "./Components/PageLoader.vue";
+import TopHeader from "./Layouts/TopHeader.vue";
+import FooterBottom from "./Layouts/FooterBottom.vue";
 
 export default {
     name: "App",
@@ -22,5 +22,8 @@ export default {
     data() {
         return { count: 0 };
     },
+    mounted() {
+        setTimeout(() => this.$root.global.loading = false, 4000)
+    }
 };
 </script>
