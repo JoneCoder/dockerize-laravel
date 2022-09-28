@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <PageLoader v-if="$root.global.loading" />
+        <PageLoader v-if="$root.loading" />
         <TopHeader />
         <router-view />
         <FooterBottom />
@@ -23,7 +23,7 @@ export default {
         return { count: 0 };
     },
     mounted() {
-        setTimeout(() => this.$root.global.loading = false, 4000)
+        setTimeout(() => this.$root.loading = false, 4000)
     }
 };
 </script>

@@ -3,7 +3,6 @@ export default {
 
     state: () => ({
         site: {},
-        loading: true,
         global: {}
     }),
 
